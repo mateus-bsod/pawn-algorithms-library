@@ -1,7 +1,7 @@
 # pawn-algorithms-library
 PAL (Pawn Algorithms Library) is designed to extend a_samp.inc by adding a broad set of high-level algorithms and utilities that are not available in the default SA-MP library.
 
-- [PAL — Pawn Algorithms Library](#-pal--pawn-algorithms-library)
+- [PAL — Pawn Algorithms Library](#license)
   - `PAL/`pal_str.inc             [String Functions](#palpal_strinc)
   - `PAL/`pal_search.inc          [Search Functions](#palpal_searchinc)
 
