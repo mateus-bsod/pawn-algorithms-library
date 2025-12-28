@@ -4,6 +4,37 @@ PAL (Pawn Algorithms Library) is designed to extend a_samp.inc by adding a broad
 - [PAL — Pawn Algorithms Library](#license)
   - `PAL/`pal_str.inc             [String Functions](#palpal_strinc)
   - `PAL/`pal_search.inc          [Search Functions](#palpal_searchinc)
+  - `PAL/`pal_pages.inc           [Pages Functions](#palpal_pagesinc)
+
+# PAL/pal_pages.inc
+```pawn
+stock PAL::GetPageBoundsIter(page, Iterator:itens, bool:itens_tem[], start_page, end_page, total_items, itens_per_page_)
+stock PAL::GetPageBounds(page, start_page, end_page, total_items, itens_per_page_)
+stock PAL::GetTotalPages(total_items, itens_per_page_)
+```
+```pawn
+new total_items = 30, page = 0, start, end;
+
+PAL::GetPageBounds( page, start, end, total_items, 10);
+printf("Page %d | Items %d to %d", page + 1, start, end);
+page++;
+
+PAL::GetPageBounds(page, start, end, total_items, 10);
+printf("Page %d | Items %d to %d", page + 1, start, end);
+page++;
+
+PAL::GetPageBounds(page, start, end, total_items,10);
+printf("Page %d | Items %d to %d", page + 1, start, end);
+
+new total_pages = PAL::GetTotalPages( total_items, 10);
+printf("Total pages: %d", total_pages);
+```
+```pawn
+Page 1 | Items 0 to 10
+Page 2 | Items 10 to 20
+Page 3 | Items 20 to 30
+Total pages: 3
+```
 
 # PAL/pal_search.inc
 ```pawn
