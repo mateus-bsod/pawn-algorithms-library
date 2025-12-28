@@ -25,7 +25,7 @@
 
 #endif
 
-#define _PAL_VERSION     (900)
+#define _PAL_VERSION     (1000)
 #define _PAL_DEBUG       (true)
 #define _PAL_VERSION_URL "https://raw.githubusercontent.com/mateus-bsod/pawn-algorithms-library/refs/heads/main/version"
 
