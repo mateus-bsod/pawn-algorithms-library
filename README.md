@@ -12,6 +12,7 @@ stock PAL::GetPageBoundsIter(page, Iterator:itens, bool:itens_tem[], start_page,
 stock PAL::GetPageBounds(page, start_page, end_page, total_items, itens_per_page_)
 stock PAL::GetTotalPages(total_items, itens_per_page_)
 ```
+#### Example of Use (PAL/pal_pages.inc):
 ```pawn
 new total_items = 30, page = 0, start, end;
 
@@ -45,6 +46,7 @@ stock PAL::Search_Last(const arr[], size, value)
 stock PAL::Search_Linear(const arr[], size, value)
 stock PAL::Search_interpolation(arr[], lo, hi, x)
 ```
+#### Example of Use (PAL/pal_search.inc):
 ```pawn
 new numbers[] = {
     5,12,3,7,3,9,20,33,42,18,27,14,6,2,11,8,19,25,31,44,
