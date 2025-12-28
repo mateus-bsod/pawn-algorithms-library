@@ -1,10 +1,102 @@
 # pawn-algorithms-library
 PAL (Pawn Algorithms Library) is designed to extend a_samp.inc by adding a broad set of high-level algorithms and utilities that are not available in the default SA-MP library.
 
+#
+
 - [PAL — Pawn Algorithms Library](#license)
+  - `PAL/`pal_sort.inc             [Sort Functions](#palpal_sortinc)
   - `PAL/`pal_str.inc             [String Functions](#palpal_strinc)
   - `PAL/`pal_search.inc          [Search Functions](#palpal_searchinc)
   - `PAL/`pal_pages.inc           [Pages Functions](#palpal_pagesinc)
+
+# PAL/pal_sort.inc
+```pawn
+stock PAL::BubbleSort_Float(Float:arr[], length = sizeof(arr))
+stock PAL::BubbleSort(arr[], length = sizeof(arr))
+```
+#### Example of Use (PAL/pal_sort.inc):
+```pawn
+new Float:distances[] =
+{
+    12.5,
+    3.2,
+    9.8,
+    1.1,
+    7.75,
+    4.0
+};
+
+printf("Before sort:");
+for (new i = 0; i < sizeof(distances); i++)
+{
+    printf("%.2f", distances[i]);
+}
+
+PAL::BubbleSort_Float(distances);
+
+printf("After sort:");
+for (new i = 0; i < sizeof(distances); i++)
+{
+    printf("%.2f", distances[i]);
+}
+```
+```pawn
+Before sort:
+12.50
+3.20
+9.80
+1.10
+7.75
+4.00
+After sort:
+1.10
+3.20
+4.00
+7.75
+9.80
+12.50
+```
+#### Example of Use (PAL/pal_sort.inc):
+```pawn
+new numbers[] = { 5, 12, 3, 7, 3, 9, 20, 1, 15 };
+
+printf("Before sort:");
+for (new i = 0; i < sizeof(numbers); i++)
+{
+    printf("%d", numbers[i]);
+}
+
+PAL::BubbleSort(numbers);
+
+printf("After sort:");
+for (new i = 0; i < sizeof(numbers); i++)
+{
+    printf("%d", numbers[i]);
+}
+
+```
+```pawn
+Before sort:
+5
+12
+3
+7
+3
+9
+20
+1
+15
+After sort:
+1
+3
+3
+5
+7
+9
+12
+15
+20
+```
 
 # PAL/pal_pages.inc
 ```pawn
