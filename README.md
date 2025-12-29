@@ -11,6 +11,13 @@ PAL (Pawn Algorithms Library) is designed to extend a_samp.inc by adding a broad
   - `PAL/`pal_search.inc          [Search Functions](#palpal_searchinc)
   - `PAL/`pal_pages.inc           [Pages Functions](#palpal_pagesinc)
 
+# Use
+```pawn
+#include <PAL/pal>
+
+// ....
+```
+
 # PAL/pal_sort.inc
 ```pawn
 stock PAL::BubbleSort_Float(Float:arr[], length = sizeof(arr))
