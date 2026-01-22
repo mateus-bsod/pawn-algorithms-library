@@ -18,7 +18,7 @@ PAL (Pawn Algorithms Library) is designed to extend a_samp.inc by adding a broad
 // ....
 ```
 
-# PAL/pal_sort.inc
+### PAL/pal_sort.inc
 ```pawn
 stock PAL::BubbleSort_Float(Float:arr[], length = sizeof(arr))
 stock PAL::BubbleSort(arr[], length = sizeof(arr))
@@ -107,11 +107,18 @@ After sort:
 20
 ```
 
-# PAL/pal_pages.inc
+### PAL/pal_pages.inc
 ```pawn
 stock PAL::GetPageBoundsIter(page, Iterator:itens, bool:itens_tem[], start_page, end_page, total_items, itens_per_page_)
 stock PAL::GetPageBounds(page, start_page, end_page, total_items, itens_per_page_)
 stock PAL::GetTotalPages(total_items, itens_per_page_)
+
+[in @version 1100]
++ stock PAL::GetCurrentPage(current_item, itens_per_page_)
++ stock PAL::GetEndPage(total_items, itens_per_page_)
++ stock PAL::GetEndPageIter(Iterator:total_items, itens_per_page_)
+* stock PAL::GetTotalPages(total_items, itens_per_page_) [Possible errors corrected.]
++ stock bool:PAL_HasSafeNextPage(current_page, total_items, itens_per_page_)
 ```
 #### Example of Use (PAL/pal_pages.inc):
 ```pawn
@@ -138,7 +145,7 @@ Page 3 | Items 20 to 30
 Total pages: 3
 ```
 
-# PAL/pal_search.inc
+### PAL/pal_search.inc
 ```pawn
 stock PAL::Search_Jump(arr[], x, n)
 stock PAL::Search_Binary(const arr[], size, value)
@@ -311,7 +318,7 @@ Index: 3
 Average time: 0.00686 ms
 ```
 
-# PAL/pal_str.inc
+#### PAL/pal_str.inc
 ```pawn
 stock PAL::Str_IsEmpty(const text[])
 stock PAL::Str_IsNumeric(const text[])
@@ -325,6 +332,9 @@ stock PAL::Str_Replace(text[], find[], replace[])
 stock PAL::Str_Explode(const text[], dest[][], max_parts, delim = '|')
 stock PAL::Str_HasDigit(text[])
 stock PAL::Str_HasSymbol(const text[])
+
+[in @version 1100]
++ stock PAL::FixText(string[]) [Credits: https://portalsamp.com/showthread.php?tid=1147]
 ```
 #### Example of Use (PAL/pal_str.inc):
 ```pawn
